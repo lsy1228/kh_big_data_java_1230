@@ -17,8 +17,8 @@ public class PrimeEx {
     //정수값을 입력받아 해당 정수가 소수인지 아닌지 판별 후 결과를 반환함
     static boolean isPrime(int n) {
         //1과 입력받은 값을 제외, 즉 2 ~ 입력받은 값 미만
-        for(int i = 2; 1 < n; i++) {
-            if(n % i == 0) return false; //전달 받은 수를 1과 자기 자신을 제외하고 나누어지는 경우를 의미
+        for(int i = 2; i < n; i++) {
+            if(n % i == 0) return false;  //전달 받은 수를 1과 자기 자신을 제외하고 나누어지는 경우를 의미
         }
         return true;
     }
