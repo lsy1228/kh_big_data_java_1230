@@ -25,6 +25,7 @@ public class ClassSortEx1 {
         System.out.print("학생 수 입력 : ");
         int num = sc.nextInt();
         int cnt = 0;
+        int preScore = 0;
         TreeSet<Student> ts = new TreeSet<>();
         for(int i = 0; i < num; i++) {
             ts.add(new Student(sc.next(), sc.nextInt(), sc.nextInt()));
@@ -35,8 +36,10 @@ public class ClassSortEx1 {
         System.out.println(" 석차   성적    이름    학번 ");
         System.out.println("---------------------------");
         for(Student e : ts) {
-            cnt++;
-            System.out.println("  "+ cnt +"     "+ e.score + "    " + e.name + "  " +e.stdNum); }
+            if(preScore != e.score) cnt++;
+            System.out.println("  "+ cnt +"     "+ e.score + "    " + e.name + "  " +e.stdNum);
+            preScore = e.score; //현재 점수를 변수에 저장
+        }
         System.out.println("---------------------------");
     }
 }
