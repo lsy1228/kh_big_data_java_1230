@@ -45,7 +45,7 @@ public class DemicalBinary {
         int i = 0;   //인덱스 계산용 변수
         int tmp;     //계산을 위한 임시값 저장용
         while(bin != 0) {
-            tmp = bin % 10  //10으로 나눈 나머지 구함
+            tmp = bin % 10;  //10으로 나눈 나머지 구함
             bin =  bin / 10;
             dec += tmp * Math.pow(2, i++);
         }
